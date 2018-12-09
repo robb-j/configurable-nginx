@@ -37,6 +37,7 @@ Your `index.html` file:
 In your client-side JavaScript, e.g. a `index.js` file:
 
 ```js
+// Outputs: "1"
 console.log(window.CONFIG.NUMBER_OF_CARROTS)
 ```
 
@@ -50,3 +51,4 @@ Every time your container restarts this new script tag is replaced by a new vers
 
 * You must have `<head><meta charset` in your `index.html` which is used to position the new script tag
 * There cannot be any return characters between the `<head>` and `<meta>` tags
+* All variables passed through as string values
