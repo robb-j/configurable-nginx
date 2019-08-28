@@ -53,7 +53,25 @@ Every time your container restarts this new script tag is replaced by a new vers
 * There cannot be any return characters between the `<head>` and `<meta>` tags
 * All variables passed through as string values
 
-## Deployment
+## Development
+
+### Testing
+
+To test the image there is a handy [docker-compose.yml](/docker-compose.yml) file
+which will build the image and test it with environment variables and an index.html.
+
+```bash
+# Builds and runs the docker image
+# -> Binds port 8080 on your machine to 80 in the container
+# -> Mounts in index.html into the right place
+# -> Sets some environment variables
+docker-compose up --build
+
+# Remember to reset index.html afterwards
+git checkout -- index.html
+```
+
+### Deployment
 
 To deploy a new version of this image,
 commit your changes and tag the commit with a

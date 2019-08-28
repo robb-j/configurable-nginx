@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  nginx:
+    build: .
+    ports:
+      - 8080:80
+    environment:
+      CONFIG_KEYS: HAS_HAT,NUMBER_OF_CARROTS
+      HAS_HAT: 1
+      NUMBER_OF_CARROTS: 42
+    volumes:
+      - ./index.html:/usr/share/html/index.html
