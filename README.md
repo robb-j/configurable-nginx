@@ -52,3 +52,13 @@ Every time your container restarts this new script tag is replaced by a new vers
 * You must have `<head><meta charset` in your `index.html` which is used to position the new script tag
 * There cannot be any return characters between the `<head>` and `<meta>` tags
 * All variables passed through as string values
+
+## Deployment
+
+To deploy a new version of this image,
+commit your changes and tag the commit with a
+[semantic version](https://semver.org/)
+and push to GitHub.
+
+There is a [DockerHub pipeline](https://hub.docker.com/r/robbj/configurable-nginx)
+to automatically build the image setup.
