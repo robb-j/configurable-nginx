@@ -1,6 +1,12 @@
 # Configurable Nginx in Docker
 
-This image is for single page apps (SPAs) so that you can pass environment variables from [docker](https://www.docker.com/) into your JavaScript
+> **Deprecated** This can be a good one-size-fits-all to quickly set environment variables in nginx,
+> but I can no-longer support it.
+> In favour, I'd recommend using off-the-shelf nginx and mounting in a "variables" script from your html
+> e.g. `<script src="/config.js />` with something like `window.CONFIG = { API_URL: 'https://example.com/api' }`.
+> Then you can use window.CONFIG.API_URL in your regular JavaScript.
+
+This image is for single page apps (SPAs) so that you can pass environment variables from [docker](https://www.docker.com/) into your JavaScript.
 
 ## Usage
 
